@@ -20,7 +20,7 @@
 
         <header>
             <img src="/assets/logo.svg" alt="Logomarca">
-            <a href="#">
+            <a href="/">
                 <span></span>
                 Voltar para home
             </a>
@@ -37,18 +37,18 @@
 
                 <div class="field">
                     <label for="">Nome da entidade</label>
-                    <input type="text" name="name">
+                    <input type="text" name="name"  required>
                 </div>
 
                 <div class="field-group">
 
                     <div class="field">
                         <label for="addres">Endereço</label>
-                        <input type="text" name="addres">
+                        <input type="text" name="addres" required>
                     </div>
                     <div class="field">
                         <label for="addres2">Número/Complemento</label>
-                        <input type="text" name="addres2">
+                        <input type="text" name="addres2" required>
                     </div>
 
                 </div>
@@ -57,16 +57,16 @@
                     
                     <div class="field">
                         <label for="addres2">Estado</label>
-                        <select name="uf" >
+                        <select name="uf" required>
                             <option value="">Selecione o Estado</option>
                         </select>
 
-                        <input type="hidden" name="state">
+                        <input type="hidden" name="state" required>
                     </div>
 
                     <div class="field">
                         <label for="city">Cidade</label>
-                        <select name="city" disabled>
+                        <select name="city" disabled re>
                             <option value="">Selecione a Cidade</option>
                         </select>
                     </div>
@@ -76,14 +76,45 @@
 
 
 
-
-
-
-            <!-- <fieldset>
+            <fieldset>
                 <legend>
                     <h2>Itens de coleta</h2>
                 </legend>
-            </fieldset> -->
+
+                <div class="items-grid">
+
+                    <li data-id="1" >
+                        <img src="./assets/lampadas.svg" alt="lampadas">
+                        <span>Lâmpadas</span>
+                    </li>
+                    <li data-id="2">
+                        <img src="./assets/baterias.svg" alt="Pilhas e Baterias">
+                        <span>Pilhas e Baterias</span>
+                    </li>
+                    <li data-id="3">
+                        <img src="./assets/papeis-papelao.svg" alt="Papeis e papelão">
+                        <span>Papeis e papelão</span>
+                    </li>
+                    <li data-id="4">
+                        <img src="./assets/eletronicos.svg" alt="Residuos Eletrônicos">
+                        <span>Residuos Eletrônicos</span>
+                    </li>
+                    <li data-id="5" >
+                        <img src="./assets/organicos.svg" alt="Residuos Orgânicos">
+                        <span>Residuos Orgânicos</span>
+                    </li>
+                    <li data-id="6">
+                        <img src="./assets/oleo.svg" alt="Óleo de Cozinha">
+                        <span>Óleo de Cozinha</span>
+                    </li>
+
+                </div>
+
+                <input type="hidden" name="items">
+            </fieldset>
+
+
+
 
             <button type="submit">Cadastrar ponto de coleta</button>
 
